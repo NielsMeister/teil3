@@ -5,7 +5,7 @@ export default function IndexPage() {
     return (
         <div className={styles.text}>
             <div>
-                <article role="article">
+                <article>
                     <h1>Generalagentur Spiez</h1>
                     <div>
                         <h2>

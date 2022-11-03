@@ -1,4 +1,7 @@
 import styles from "./index.module.css"
+
+{/* BildgallerieKomponent importieren */
+}
 import Carousel from "react-bootstrap/Carousel";
 
 export default function IndexPage() {
@@ -10,7 +13,9 @@ export default function IndexPage() {
                     Generalagentur in Spiez verbringen, hier ein kurzer Rückblick:</p>
             </div>
             <div className={styles.carouselContainer}>
+                {/* Einsetzen des Bootstrap BildgalleriKomponent*/}
                 <Carousel className={styles.carouselItem}>
+                    {/* einzelne Elemente des Slideshows mit Bild definieren */}
                     <Carousel.Item>
                         <img
                             className="d-block w-100"

@@ -1,59 +1,59 @@
 import {useRouter} from "next/router";
-import {useRef, useState} from "react";
+import {useState} from "react";
 import styles from "../pages/contact.module.css"
 import Form from 'react-bootstrap/Form';
-import Alert from 'react-bootstrap/Alert';
 
 
-{/*Model des Error Handlings*/
+{/* leeres Model des Formulars in einem Objekt für das Errorhandling */
 }
 const defaultModel = {
     title: "", message: "", email: ""
 }
 
 function validateModel(formular) {
-    {/*Funktion die überprüft ob die unten angegebene Validierung stimmt, falls nicht erscheint ein Text auf*/
+    {/* beim Starten der Überprüfung werden die ErrorMessages auf 'leer' gesetzt */
     }
     const errors = {
         title: "", message: "", email: ""
     }
+
+    {/* boolean für Definition ob Formular valid oder nicht */
+    }
     let isValid = true;
 
-    {/*Falls unter 5 Zeichen*/
+    {/* Inhalt wird auf die Länge überprüft, falls unter 5 Zeichen (.trim schneidet die Leerzeichen),
+    werden Errors gesetzt und es wird abgelehhnt */
     }
     if (formular.title.trim().length < 5) {
         errors.title = "Titel darf nicht < 5 Zeichen sein"
         isValid = false;
     }
-    {/*Falls unter 5 Zeichen*/
-    }
+
     if (formular.message.trim().length === null || formular.message.trim().length < 5) {
         errors.message = "Message darf nicht <5 Zeichen sein"
         isValid = false;
     }
-    {/*E-Mail nicht leer*/
-    }
+
     if (formular.email.trim().length === 0) {
         errors.email = "E-Mail darf nicht leer sein"
         isValid = false;
     }
 
+    {/* die Ergebnisse werden zurückgegeben */
+    }
     return {errors, isValid}
 }
 
 export default function KontaktForm() {
-    {/*React Feature. Ist wie ein Navigator, der dich durch das Web navigieren kann*/
+    {/* variable zur Navigierung durch die Seiten, spezielles react feature*/
     }
     const router = useRouter()
-    {/*Getter und Setter im Frontend*/
-    }
+
     const [formular, setFormular] = useState(defaultModel)
     const [isLoading, setIsLoading] = useState(false)
     const [errors, setErrors] = useState(defaultModel)
-    {/*Refferenziert auf angegebenes <form>*/
-    }
 
-    {/*Falls Änderungen in den Eingabefeldern gemacht werden, werden diese hier entdeckt und die Werte neu gesetzt*/
+    {/* Funktion zur Erkennung von Änderungen im Eingabefeld */
     }
     const handleChange = (e) => {
         const field = e.target.name
@@ -63,14 +63,14 @@ export default function KontaktForm() {
         })
     }
 
-    {/*Beim Abschicken des Formulares*/
+    {/* Überprüfung beim Abschicken des Formulars */
     }
     const handleSubmit = async (e) => {
         e.preventDefault()
         setIsLoading(true)
         setErrors(defaultModel)
 
-        {/*Aufruf Validierungsmethode*/
+        {/* Aufruf der ValidierungsFunktion */
         }
         const result = validateModel(formular)
         if (!result.isValid) {
@@ -78,10 +78,10 @@ export default function KontaktForm() {
             setIsLoading(false)
             return
         }
-        {/*Falls Alles ok*/
+
+        {/* wenn die Resultate ok sind wird ein Alert ausgelöst und auf die LandingPage navigiert */
         }
         if (result.isValid) {
-            // Homepage navigation
             alert("Danke für deine Nachricht! Unser Team wird sich frühmöglichst bei dir melden :)")
             router.push("/")
         }
@@ -89,11 +89,12 @@ export default function KontaktForm() {
     }
 
     return (
-        <>
+        <div>
             <form onSubmit={handleSubmit}>
                 <fieldset className={styles.form}>
                     <p>Vor und Nachname*</p>
                     <Form.Control type="text" name="title" onChange={handleChange} value={formular.title} required/>
+                    {/* bei && werden folgende Elemente nur durchgelassen wenn die vorausgehende Bedingung true ergibt */}
                     {errors.title && <div className={styles.error}>{errors.title}</div>}
                 </fieldset>
 
@@ -109,11 +110,12 @@ export default function KontaktForm() {
                     {errors.email && <div className={styles.error}>{errors.email}</div>}
                 </fieldset>
 
+                {/* während Ladevorgang wird der Button 'ausgeschaltet' */}
                 <button disabled={isLoading}>
                     {isLoading ? "...Loading" : "Submit"}
                 </button>
             </form>
-        </>
+        </div>
     )
 }
 

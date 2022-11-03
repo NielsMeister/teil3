@@ -1,11 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
+/* mit Sternchen werden sämtliche Elemente angesprochen */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* bei unexpliziten Selektoren (keine Klassen oder Ids) werden alle Elemente des angegebenen Typs angesprochen */
 html,
 body {
     font-family: 'Rooney Pro Light', sans-serif;
@@ -13,6 +15,7 @@ body {
     scroll-behavior: smooth;
 }
 
+/* hier werden mehrere Elemente innerhalb eines anderen angesprochen */
 html > h1, h2, h3, h4, h5, h6 {
     color: red;
 }
@@ -45,6 +48,7 @@ button, .button {
     text-align: center;
 }
 
+/* mit dieser Funktion wird für responsivness gesorgt. Alle Angaben werden Ausgeführt sobald das Browserfenster eine Breite von mindestens 1200px erreicht */
 @media (min-width: 1200px) {
     .page {
         display: flex;
