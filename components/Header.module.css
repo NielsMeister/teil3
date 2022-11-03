@@ -1,8 +1,7 @@
 .header {
-    position: sticky;
     top: 0;
     width: 100%;
-    padding: 0.5em;
+    /* gibt dem Element einen schatten mit folgenden Angaben: */
     box-shadow: 0 1px 6px 0 rgb(0 0 0 / 20%);
     display: flex;
     background-color: white;
@@ -15,6 +14,28 @@
     font-size: 2em;
 }
 
+/* mit element:hover kann das Verhalten des Elements bei Mauszeiger-hovern definiert werden */
 .header > a:hover {
     text-decoration: none;
+}
+
+.headerImage {
+    width: 100%;
+    /* mit dem Wert auto passt sich das Element selbständig passend an */
+    height: auto;
+}
+
+.nav {
+    display: flex;
+}
+
+.nav > div {
+    width: 50%;
+    text-align: center;
+    border-style: outset;
+    border-radius: 5px;
+}
+
+.active {
+    background: grey;
 }

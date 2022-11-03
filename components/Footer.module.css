@@ -1,0 +1,39 @@
+/* Elemente über die vergebenen Klassennamen ansprechen und bestimme Werte definieren */
+.footer {
+    height: 7em;
+    background-color: rgb(255, 28, 28, 0.58);
+    /* bestimmt den "Abstand" der das Element um sich erzeugt, in diesem Fall nach oben */
+    margin-top: 2em;
+}
+
+.content {
+    margin-left: 1em;
+    margin-right: 1em;
+    /* gibt die Art wie die beinhaltenden Elemente angezeigt werden, hier nebeneinander */
+    display: flex;
+    /* definiert wie sich die Elemente verteilen */
+    justify-content: space-between;
+    /* legt fest wo sich die Elemente anordnen */
+    align-items: center;
+}
+
+/* bestimmte Elemente innerhalb eines anderen ansprechen */
+.content > div {
+    width: 100%;
+    margin-top: 1em;
+}
+
+.footerLink {
+    /* hier Angaben mit "!important" annotiert, dadurch werden andere ansprechende Angaben überschrieben  */
+    text-decoration: underline !important;
+}
+
+.contacts {
+    /* explizit kein zusätzlicher Style zulassen */
+    list-style: none;
+}
+
+.listContainer {
+    /* definiert (ebenfalls) wo sich die inneren Elemente anordnen */
+    align-items: self-start;
+}

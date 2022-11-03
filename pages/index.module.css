@@ -4,3 +4,59 @@
     justify-content: center;
     align-items: center;
 }
+
+.carouselItem {
+    height: 28em;
+    width: 36em;
+    margin: auto;
+}
+
+.visitMain {
+    margin: auto;
+}
+
+.text {
+    margin: auto;
+    width: 70%;
+}
+
+.footerLink {
+    text-decoration: underline !important;
+}
+
+.contacts {
+    list-style: none;
+}
+
+.listContainer {
+    align-items: self-start;
+}
+
+.contactContainer {
+    outline: outset;
+    border-radius: 12px;
+    height: 7em;
+    width: 14em;
+}
+
+.contactLink {
+    display: flex;
+    margin: auto;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.impressumContainer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 9em;
+    margin-bottom: 9em;
+}
+
+.teamImage {
+    height: 510px;
+    width: 680px;
+    margin-bottom: 6em;
+    margin-top: 2em;
+}
