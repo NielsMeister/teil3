@@ -1,8 +1,8 @@
 import styles from "./index.module.css"
+import Carousel from "react-bootstrap/Carousel";
 
 {/* BildgallerieKomponent importieren */
 }
-import Carousel from "react-bootstrap/Carousel";
 
 export default function IndexPage() {
     return (

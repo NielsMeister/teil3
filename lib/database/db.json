@@ -1,7 +1,13 @@
 {
   "technologies": [
-    { "id": 1, "name": "reactjs"},
-    { "id": 2, "name": "nextjs"}
+    {
+      "id": 1,
+      "name": "reactjs"
+    },
+    {
+      "id": 2,
+      "name": "nextjs"
+    }
   ],
   "users": [
     {

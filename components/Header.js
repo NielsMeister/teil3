@@ -9,9 +9,15 @@ export default function Header() {
             </header>
             {/* Navigation mit Verlinkung zu den jeweiligen Seiten, href="" bezieht sich auf Dateipfad der Files */}
             <nav className={styles.nav} id={"nav"}>
-                <div><a href={"/"}><div>Home</div></a></div>
-                <div><a href={"/visit"}><div>Unser Besuch</div></a></div>
-                <div><a href={"/impressum"}><div>Impressum</div></a></div>
+                <div><a href={"/"}>
+                    <div>Home</div>
+                </a></div>
+                <div><a href={"/visit"}>
+                    <div>Unser Besuch</div>
+                </a></div>
+                <div><a href={"/impressum"}>
+                    <div>Impressum</div>
+                </a></div>
             </nav>
         </>
     )
