@@ -1,5 +1,6 @@
 import styles from "./index.module.css"
 import Carousel from "react-bootstrap/Carousel";
+import Table from "react-bootstrap/Table";
 
 {/* BildgallerieKomponent importieren */
 }
@@ -52,56 +53,75 @@ export default function IndexPage() {
                         />
                     </Carousel.Item>
                 </Carousel>
-                <div className={styles.text}>
-                    <p>Ill tell you how I feel about school, Jerry. Its a waste of time. Bunch of people runnin around
-                        bumpin into each other, got a guy up front says, 2 + 2, and the people in the back say, 4. Then
-                        the bell rings and they give you a carton of milk and a piece of paper that says you can go take
-                        a dump or somethin. I mean, its not a place for smart people, Jerry. I know thats not a popular
-                        opinion, but thats my two cents on the issue. Well, shes my daughter, Summer. I outrank you. Or,
-                        family means nothing, in which case, dont play that card. Really, youre gonna pull that move? I
-                        guided your entire civilisation. Your people have a holiday named ricksgiving. They teach kids
-                        about me in school. The algorithm learns your preferences better that way. Plus, if you get in
-                        kind of a cool enough relationship, you can sort of follow each other and check out each others
-                        kinks, you know?
-                    </p><p>
-
-                    We dont whitewash it either, Morty. I mean, the pirates are really rapey. Who cares, Morty?
-                    Global acts of terrorism happen every day. Uh, heres something thats never happened before—Im a
-                    pickle! Im Pickle Ri-i-i-ick! Summer, next time were hiding in a chlorkian echo nest, can you do
-                    me a favour and turn your ringer off?! Im man enough to simply say, Im going to poop, and Id be
-                    honored to have Ron Howard involved.
-                    Rikitikitavi, bitch! Grassss... Taste bad! I aint better than shit, Jack! Dont mind those stare
-                    goblins.
-                </p>
-                    <h3>Cantaloupe</h3>
-                    <p>
-                        Countries known for their sexually aggressive men. I dont like it here Morty. I cant abide
-                        bureaucracy. I dont like being told where to go and what to do. I consider it a violation. Did
-                        you
-                        get those seeds all the way up your butt? I was just killing some snaked up here like everyone
-                        else,
-                        I guess, and finishing the Christmas lights. This is because you give Morty Smith bad grades,
-                        bitch!
-
-                        And thats the wayyy, the news goes! Plutos a planet. Oh, were welllll past that, Jerry! I was
-                        just
-                        killing some snaked up here like everyone else, I guess, and finishing the Christmas lights.
-                    </p><p>
-                    I dunno, some people would pay top dollar for that kind of breakthrough. I couldnt hear you over my
-                    own screaming. Weve talked about this! Ill tell you how I feel about school, Jerry. Its a waste of
-                    time. Bunch of people runnin around bumpin into each other, got a guy up front says, 2 + 2, and the
-                    people in the back say, 4. Then the bell rings and they give you a carton of milk and a piece of
-                    paper that says you can go take a dump or somethin. I mean, its not a place for smart people, Jerry.
-                    I know thats not a popular opinion, but thats my two cents on the issue. Well he roped me into this!
-
-                    Yes. Hes a getaway driver with Aspergers and my butthole is a demolitions expert. Want to piss on
-                    him? I took your family? Who do you think had taken more from them when you shot 2 Wow I really
-                    crononbergd up the whole place huh Morty, just a bunch a cronenbergs walkin around.
-                </p><p>
-                    Well let me check my list of powers and weaknesses: ability to do anything, but only whenever I
-                    want. Yeah, that sounds like a job for me. Nice one, Ms Pancakes. Id like to order one large phone
-                    with extra phones please. cell phone, no no no rotary... and payphone on half. Burgertime!</p>
-                </div>
+                <h1>Tagesablauf</h1>
+                <Table striped bordered hover>
+                    <thead>
+                    <tr>
+                        <th>Zeit</th>
+                        <th>Tätigkeiten Halimaji Valmir</th>
+                        <th>Tätigkeiten Meister Niels</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>08:15</td>
+                        <td>Ankunft bei der GA Spiez</td>
+                        <td>Ankunft bei der GA Spiez</td>
+                    </tr>
+                    <tr>
+                        <td>08:30</td>
+                        <td>Kurzer Rundgang durch das Gebäude</td>
+                        <td>Kurzer Rundgang durch das Gebäude</td>
+                    </tr>
+                    <tr>
+                        <td>09:15</td>
+                        <td>Einführung ins b2e Portal mit Kilian</td>
+                        <td>Sortieren von Post mit Alessia</td>
+                    </tr>
+                    <tr>
+                        <td>10:30</td>
+                        <td>Selbständig offene Fälle bearbeiten im b2e mit Kilian</td>
+                        <td>
+                            Schadenfälle mit Garagen koordinieren (telefonieren /
+                            Mailverkehr)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>12:00</td>
+                        <td>Mittagspause</td>
+                        <td>Mittagspause</td>
+                    </tr>
+                    <tr>
+                        <td>12:45</td>
+                        <td>Re-Organisierung des Resourcen Raums</td>
+                        <td>Re-Organisierung des Resourcen Raums</td>
+                    </tr>
+                    <tr>
+                        <td>13:30</td>
+                        <td>Mailverkehr bearbeiten</td>
+                        <td>
+                            Aktualisierung von Bezieungsstaten mit Kunden im b2e / elan
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>14:30</td>
+                        <td>Beratung zu Autoversicherung (persönlicher Kundenkontakt)</td>
+                        <td>
+                            Organisation und Koordination von Mobiliar-interner Rollerdisco
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>15:30</td>
+                        <td>Übergabe von Dankesgeschenke</td>
+                        <td>Übergabe von Dankesgeschenke</td>
+                    </tr>
+                    <tr>
+                        <td>16:00</td>
+                        <td>Aufbrechen nach Köniz</td>
+                        <td>Aufbrechen nach Uetendorf</td>
+                    </tr>
+                    </tbody>
+                </Table>
             </div>
         </div>
     )
