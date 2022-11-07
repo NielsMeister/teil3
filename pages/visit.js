@@ -122,6 +122,17 @@ export default function IndexPage() {
                     </tr>
                     </tbody>
                 </Table>
+
+                <h5 className={styles.h5}>08:15</h5>
+                <h5 className={styles.h5}>08:30</h5>
+                <h5 className={styles.h5}>09:15</h5>
+                <h5 className={styles.h5}>10:30</h5>
+                <h5 className={styles.h5}>12:00</h5>
+                <h5 className={styles.h5}>12:45</h5>
+                <h5 className={styles.h5}>13:30</h5>
+                <h5 className={styles.h5}>14:30</h5>
+                <h5 className={styles.h5}>15:30</h5>
+                <h5 className={styles.h5}>16:00</h5>
             </div>
         </div>
     )
